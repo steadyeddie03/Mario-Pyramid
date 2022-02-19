@@ -1,5 +1,5 @@
 
-printPyramid(7);
+printPyramid(prompt("Please enter pyramid height: "));
 // TODO #2
 // Take in user input for the height
 
@@ -16,49 +16,29 @@ printPyramid(7);
  *      ######
  */
 function printPyramid(height) {
-  console.log("Uh oh... the pyramid is under construction.");
-  console.log("Check back soon, our developers are hard at work as we speak!");
-
-  console.log(height);
-
-  // TODO #1
-  // print that pyramid!
-
-  //nested for loop
-
-//if the height is 5
-//the top row should be 3 spaces and 2 bricks  "   ##"
-//the next row should be 2 spaces and 3 bricks "  ###"
-//the next row should be 1 spaces and 4 bricks "  ###"
-
-  //run for each row
-let row = "";
-
-  for (let i = height; i > 0; i--) {  //print each row
-
-    //building the row
-    for (let j = 0; j < height; j++) {//builds the row by adding characters
-      
-       if(j>i){
-         row = row + "#";
-        //  console.log(row);
-       }else{
-        row = row + " ";
-        // console.log(row);
-       }
-      //  if(j%1 == 0){
-      //    row = row + "#";
-      //   //  console.log(row);
-      //  }else{
-      //   row = row + " ";
-      //   // console.log(row);
-      //  }
-       
-      
+  for (var row = 0; row < height; row++) {
+  
+          // figure out how many bricks in this row (aka the '#' characters)
+          var numBricks = row + 2;
+  
+          // figure out how many space characters
+          var numSpaces = height - row - 1;
+  
+          // build up a string for this row. Starts empty...
+          var rowStr = "";
+  
+          // add the spaces
+          for (var i = 0; i < numSpaces; i++) {
+              rowStr += " ";
+          }
+  
+          // add the bricks
+          for (var i = 0; i < numBricks; i++) {
+              rowStr += "#";
+          }
+  
+          // print the string
+          console.log(rowStr);
     }
-    console.log(row);
-    // console.log(`This row should have ${height -(i+1)} spaces`);
-    row = "";
-  }
 }
 
