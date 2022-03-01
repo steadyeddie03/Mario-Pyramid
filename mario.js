@@ -1,5 +1,5 @@
   
-printPyramid(prompt("Please enter pyramid height: "));
+//printPyramid(prompt("Please enter pyramid height: "));
 // TODO #2
 // Take in user input for the height
 
@@ -54,7 +54,27 @@ function printPyramid(height) {
 
           
     }
+
 }
+
+
+// function determineHeightAndThenDrawPyramid{
+//   var x = document.getElementById("myText").value;
+//   document.getElementById("pyramid").innerHTML = x;
+// }
+
+// button = document.getElementById("draw-button");
+// button.onclick = function() {
+
+//     // figure out the height the user typed
+//     heightStr = document.getElementById("height").value
+
+//     // convert the string to an int
+//     height = parseInt(heightStr);
+
+//     // draw pyramid with that height
+//     drawPyramid(height);
+// }
 
 //pyramidDiv = document.getElementById("pyramid");
 
