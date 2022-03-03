@@ -63,18 +63,24 @@ function printPyramid(height) {
 //   document.getElementById("pyramid").innerHTML = x;
 // }
 
-// button = document.getElementById("draw-button");
-// button.onclick = function() {
+button = document.getElementById("draw-button");
 
-//     // figure out the height the user typed
-//     heightStr = document.getElementById("height").value
+// add event listener
+button.addEventListener("click", determineHeightAndThenDrawPyramid);
 
-//     // convert the string to an int
-//     height = parseInt(heightStr);
+function determineHeightAndThenDrawPyramid() {
 
-//     // draw pyramid with that height
-//     drawPyramid(height);
-// }
+    // figure out the height the user typed
+    heightStr = document.getElementById("height").value
+
+    // convert the string to an int
+    height = parseInt(heightStr);
+
+    // draw pyramid with that height
+    printPyramid(height);
+    
+    
+}
 
 //pyramidDiv = document.getElementById("pyramid");
 
